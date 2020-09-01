@@ -1,0 +1,22 @@
+{
+  "name": "sportsmaniac",
+  "version": "1.0.0",
+  "description": "A sports Webapp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cameronduncan678/SportsManiac.git"
+  },
+  "author": "Cameron Duncan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cameronduncan678/SportsManiac/issues"
+  },
+  "homepage": "https://github.com/cameronduncan678/SportsManiac#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
