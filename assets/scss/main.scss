@@ -1,0 +1,12 @@
+@import 'mixins/colors.scss', 'mixins/mixins.scss', 'mixins/fonts.scss';
+
+body {
+  background-color: $mainColor;
+  color: white;
+  font-family: $text;
+}
+
+h2 {
+  text-align: center;
+  font-family: $title;
+}

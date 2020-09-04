@@ -18,5 +18,11 @@
   "homepage": "https://github.com/cameronduncan678/SportsManiac#readme",
   "devDependencies": {
     "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglifycss": "^1.1.0"
   }
 }
