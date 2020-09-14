@@ -6,7 +6,26 @@ body {
   font-family: $text;
 }
 
-h2 {
+h1 {
   text-align: center;
   font-family: $title;
+}
+
+h2 {
+  font-family: $title;
+}
+
+.space {
+  margin: 40px;
+}
+
+.whiteLine {
+  border-top: solid 4px white;
+  margin-bottom: 60px;
+}
+
+.whiteLine2 {
+  border-top: solid 4px white;
+  margin-bottom: 60px;
+  margin-top: 60px;
 }

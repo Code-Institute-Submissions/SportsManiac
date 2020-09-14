@@ -1,0 +1,7 @@
+@import 'mixins/colors.scss', 'mixins/mixins.scss', 'mixins/fonts.scss';
+
+.search-title {
+  color: $mainColor;
+  padding-left: 30px;
+  border-radius: 5px;
+}

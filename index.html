@@ -22,14 +22,140 @@
     <link rel="stylesheet" href="assets/css/compiled/main.css" />
   </head>
   <body>
+    <!--Header Section-->
     <section id="home-header">
       <div class="home-header-title">
-        <h2>SportsManiac <i class="fas fa-football-ball"></i></h2>
+        <h1>SportsManiac <i class="fas fa-football-ball"></i></h1>
       </div>
     </section>
+    <!--Slider Section-->
+    <section class="section grey darken-4 slider-section">
+      <div class="slider">
+        <ul class="slides">
+          <li>
+            <img src="./assets/images/carousel/audience_img_01.jpg" alt="" />
+            <div class="caption right-align">
+              <h3>Go crazy for Sport</h3>
+            </div>
+          </li>
+          <li>
+            <img src="./assets/images/carousel/sport_img_01.jpg" alt="" />
+            <div class="caption left-align">
+              <h3>Be a part of the Action</h3>
+            </div>
+          </li>
+          <li>
+            <img src="./assets/images/carousel/team_img_01.png" alt="" />
+            <div class="caption right-align">
+              <h3>Root for your Team</h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--Search Bar Section-->
+    <section>
+      <div class="whiteLine2">
+        <div class="home-container">
+          <div class="grey darken-3 search-title">
+            <h2>Search For Your Team</h2>
+          </div>
+          <div class="input-field">
+            <input
+              type="text"
+              class="white grey-text autocomplete"
+              placeholder="Boston, Aukland, etc..."
+              id="autocomplete-input"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Sport Buttons Section-->
+    <section class="home-container">
+      <div class="home-sports-btns">
+        <button class="btn green lighten-2 sport-btn">
+          <h1><i class="fas fa-baseball-ball"></i></h1>
+        </button>
+        <button class="btn blue lighten-2 sport-btn">
+          <h1><i class="fas fa-futbol"></i></h1>
+        </button>
+        <button class="btn red lighten-2 sport-btn">
+          <h1><i class="fas fa-football-ball"></i></h1>
+        </button>
+        <button class="btn grey darken-3 sport-btn"><h1>RG</h1></button>
+        <button class="btn cyan lighten-2 sport-btn">
+          <h1><i class="fas fa-basketball-ball"></i></h1>
+        </button>
+      </div>
+    </section>
+    <!--Accordion Bar Section-->
+    <section>
+      <div id="accordion1" class="home-container">
+        <div class="accordion green lighten-1">
+          <div>
+            <img
+              class="accordion-sports-logo grey darken-3"
+              src="https://www.thesportsdb.com/images/media/team/logo/xwuypy1420737149.png"
+            />
+            <span><h2>Boston Celtics</h2></span>
+            <span class="accordion-btn"
+              ><h2><i class="fas fa-caret-down"></i></h2
+            ></span>
+          </div>
+        </div>
+        <div
+          id="accordion1-rollout"
+          class="accordion-rollout row green lighten-1"
+          style="display: none"
+        >
+          <div class="col s3 grey darken-3 accordion-sports-badge">
+            <img
+              src="https://www.thesportsdb.com/images/media/team/badge/051sjd1537102179.png"
+              class="accordion-sports-badge-badge"
+            />
+          </div>
+          <div class="col s7">
+            <p class="accordion-team-description">
+              The Boston Celtics (ˈsɛlˌtɪks) are an American professional
+              basketball franchise based in Boston, Massachusetts. They play in
+              the Atlantic Division of the Eastern Conference in the National
+              Basketball Association (NBA). Founded in 1946 and one of eight NBA
+              teams (out of 23 total teams) to survive the league's first
+              decade, the team is currently owned by Boston Basketball Partners
+              LLC...
+            </p>
+          </div>
+          <div class="col s2 white accordion-link">
+            <div class="btn-large grey darken-3 accordion-link-btn">
+              <i class="fas fa-external-link-square-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="space"></div>
+    </section>
 
+    <div class="whiteLine"></div>
+    <!--Footer Section-->
+    <section class="footer-section grey darken-3">
+      <div class="container"></div>
+    </section>
     <!--SCRIPTS-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //Init Slider
+        $('.slider').slider({
+          indicators: false,
+          height: 700,
+          transition: 500,
+          interval: 6000,
+        });
+      });
+    </script>
+    <script src="js/accordion.js"></script>
   </body>
 </html>

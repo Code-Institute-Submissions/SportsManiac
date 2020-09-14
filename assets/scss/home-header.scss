@@ -2,5 +2,10 @@
 
 .home-header-title {
   border-bottom: solid 4px;
-  padding-bottom: 20px;
+}
+
+.home-header-title h1 {
+  color: $mainColor;
+  background: white;
+  padding: 10px 0;
 }

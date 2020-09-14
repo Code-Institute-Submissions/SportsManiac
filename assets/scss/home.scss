@@ -1,0 +1,19 @@
+@import 'mixins/colors.scss', 'mixins/mixins.scss', 'mixins/fonts.scss';
+
+.home-container {
+  width: 90%;
+  margin: 0 Auto;
+  margin-top: 30px;
+}
+
+.home-sports-btns {
+  margin-left: 5%;
+}
+.sport-btn {
+  width: 19%;
+  height: 200px;
+}
+
+.sport-btn i {
+  font-size: 200%;
+}
