@@ -1,5 +1,12 @@
 @import 'mixins/colors.scss', 'mixins/mixins.scss', 'mixins/fonts.scss';
 
+.accordion-section {
+  background: $dark-1-mainColor;
+  padding-top: 20px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
 .accordion {
   width: 95%;
   height: 130px;
@@ -11,7 +18,6 @@
 }
 
 .accordion-rollout {
-  height: 300px;
   margin: 0 auto;
   width: 95%;
   border: solid white;
@@ -62,4 +68,10 @@
 
 .accordion-link-btn i {
   font-size: 600%;
+}
+
+@media only screen and (max-width: 600px) {
+  .team-name {
+    display: none;
+  }
 }

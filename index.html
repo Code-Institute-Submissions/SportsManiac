@@ -61,37 +61,52 @@
             <h2>Search For Your Team</h2>
           </div>
           <div class="input-field">
-            <input
-              type="text"
-              class="white grey-text autocomplete"
-              placeholder="Boston, Aukland, etc..."
-              id="autocomplete-input"
-            />
+            <div class="row">
+              <div class="col s10">
+                <input
+                  type="text"
+                  class="white grey-text autocomplete"
+                  placeholder="Boston, Aukland, etc..."
+                  id="search-input"
+                  required
+                />
+              </div>
+              <div class="col s2">
+                <div id="search-btn" class="btn search-btn green lighten-1">
+                  <h5>Search</h5>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!--Sport Buttons Section-->
     <section class="home-container">
-      <div class="home-sports-btns">
-        <button class="btn green lighten-2 sport-btn">
-          <h1><i class="fas fa-baseball-ball"></i></h1>
-        </button>
-        <button class="btn blue lighten-2 sport-btn">
-          <h1><i class="fas fa-futbol"></i></h1>
-        </button>
-        <button class="btn red lighten-2 sport-btn">
-          <h1><i class="fas fa-football-ball"></i></h1>
-        </button>
-        <button class="btn grey darken-3 sport-btn"><h1>RG</h1></button>
-        <button class="btn cyan lighten-2 sport-btn">
-          <h1><i class="fas fa-basketball-ball"></i></h1>
-        </button>
+      <div class="row">
+        <div class="col red s4 m2 sport-btn center">
+          <h2><i class="fas fa-baseball-ball"></i></h2>
+        </div>
+        <div class="col purple s4 m2 sport-btn center">
+          <h2><i class="fas fa-futbol"></i></h2>
+        </div>
+        <div class="col blue s4 m2 sport-btn center">
+          <h2><i class="fas fa-football-ball"></i></h2>
+        </div>
+        <div class="col cyan s4 m2 sport-btn center">
+          <h2><i class="fas fa-basketball-ball"></i></h2>
+        </div>
+        <div class="col yellow s4 m2 sport-btn center">
+          <h2><i class="fas fa-hockey-puck"></i></h2>
+        </div>
+        <div class="col black s4 m2 sport-btn center">
+          <h2>RG</h2>
+        </div>
       </div>
     </section>
     <!--Accordion Bar Section-->
-    <section>
-      <div id="accordion1" class="home-container">
+    <section id="accordions" class="home-container accordion-section">
+      <!-- <div id="accordion1" class="home-container accordion-section">
         <div class="accordion green lighten-1 row">
           <div class="col s8 m2 grey darken-3">
             <img
@@ -110,13 +125,13 @@
           class="accordion-rollout row green lighten-1"
           style="display: none"
         >
-          <div class="col s3 grey darken-3 accordion-sports-badge">
+          <div class="col s12 m3 grey darken-3 accordion-sports-badge">
             <img
               src="https://www.thesportsdb.com/images/media/team/badge/051sjd1537102179.png"
               class="accordion-sports-badge-badge"
             />
           </div>
-          <div class="col s7">
+          <div class="col s12 m7">
             <p class="accordion-team-description">
               The Boston Celtics (ˈsɛlˌtɪks) are an American professional
               basketball franchise based in Boston, Massachusetts. They play in
@@ -127,13 +142,8 @@
               LLC...
             </p>
           </div>
-          <div class="col s2 white accordion-link">
-            <div class="btn-large grey darken-3 accordion-link-btn">
-              <i class="fas fa-external-link-square-alt"></i>
-            </div>
-          </div>
         </div>
-      </div>
+      </div> -->
       <div class="space"></div>
     </section>
 
@@ -158,5 +168,7 @@
       });
     </script>
     <script src="js/accordion.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

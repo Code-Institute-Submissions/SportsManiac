@@ -1,0 +1,38 @@
+@import 'mixins/colors.scss', 'mixins/mixins.scss', 'mixins/fonts.scss';
+
+.team-Badge-main {
+  height: 500px;
+  width: 100%;
+  object-fit: contain;
+}
+
+.team-title {
+  padding: 10px;
+  color: $mainColor;
+  border-radius: 5px;
+}
+
+.team-full-desc {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.team-member {
+  height: 200px;
+}
+
+.stadium-section {
+  background: url('https://www.thesportsdb.com/images/media/team/stadium/yuyrvx1420576364.jpg');
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.stadium-desc {
+  height: 100%;
+}
+
+.team-event {
+  height: 250px;
+}
