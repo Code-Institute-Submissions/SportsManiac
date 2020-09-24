@@ -17,7 +17,7 @@ async function getTeams(term, callback) {
   processedUrl = processURL(url, term);
 
   await axios.get(processedUrl).then((res) => {
-    callback(res.data);
+    callback(res.data.teams);
   });
 }
 
