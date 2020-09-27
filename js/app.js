@@ -22,12 +22,13 @@ function filterSport(input, sport) {
 function buildAccordions(dataArr) {
   accordionArray = '';
   if (dataArr) {
-    dataArr.forEach((obj) => {
+    dataArr.forEach((obj, index) => {
       accordionArray += addAccordion(
         obj.strTeamLogo,
         obj.strTeam,
         obj.strTeamBadge,
-        obj.strDescriptionEN
+        obj.strDescriptionEN,
+        index
       );
     });
   }
@@ -37,13 +38,14 @@ function buildAccordions(dataArr) {
 function baseballAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
-    dataArr.forEach((obj) => {
+    dataArr.forEach((obj, index) => {
       if (obj.strSport == 'Baseball')
         accordionArray += addAccordion(
           obj.strTeamLogo,
           obj.strTeam,
           obj.strTeamBadge,
-          obj.strDescriptionEN
+          obj.strDescriptionEN,
+          index
         );
     });
   }
@@ -53,13 +55,14 @@ function baseballAccordion(dataArr) {
 function soccerAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
-    dataArr.forEach((obj) => {
+    dataArr.forEach((obj, index) => {
       if (obj.strSport == 'Soccer')
         accordionArray += addAccordion(
           obj.strTeamLogo,
           obj.strTeam,
           obj.strTeamBadge,
-          obj.strDescriptionEN
+          obj.strDescriptionEN,
+          index
         );
     });
   }
@@ -69,13 +72,14 @@ function soccerAccordion(dataArr) {
 function footballAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
-    dataArr.forEach((obj) => {
+    dataArr.forEach((obj, index) => {
       if (obj.strSport == 'American Football')
         accordionArray += addAccordion(
           obj.strTeamLogo,
           obj.strTeam,
           obj.strTeamBadge,
-          obj.strDescriptionEN
+          obj.strDescriptionEN,
+          index
         );
     });
   }
@@ -85,13 +89,14 @@ function footballAccordion(dataArr) {
 function basketBallAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
-    dataArr.forEach((obj) => {
+    dataArr.forEach((obj, index) => {
       if (obj.strSport == 'Basketball')
         accordionArray += addAccordion(
           obj.strTeamLogo,
           obj.strTeam,
           obj.strTeamBadge,
-          obj.strDescriptionEN
+          obj.strDescriptionEN,
+          index
         );
     });
   }
@@ -101,13 +106,14 @@ function basketBallAccordion(dataArr) {
 function hockeyAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
-    dataArr.forEach((obj) => {
+    dataArr.forEach((obj, index) => {
       if (obj.strSport == 'Ice Hockey')
         accordionArray += addAccordion(
           obj.strTeamLogo,
           obj.strTeam,
           obj.strTeamBadge,
-          obj.strDescriptionEN
+          obj.strDescriptionEN,
+          index
         );
     });
   }
@@ -117,13 +123,14 @@ function hockeyAccordion(dataArr) {
 function rugbyAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
-    dataArr.forEach((obj) => {
+    dataArr.forEach((obj, index) => {
       if (obj.strSport == 'Rugby')
         accordionArray += addAccordion(
           obj.strTeamLogo,
           obj.strTeam,
           obj.strTeamBadge,
-          obj.strDescriptionEN
+          obj.strDescriptionEN,
+          index
         );
     });
   }

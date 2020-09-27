@@ -66,7 +66,7 @@ async function getTeamEventsLast(teamId, callback) {
 
 //DOM manipulation Functions
 
-function addAccordion(logoUrl, teamName, teamBadge, teamText) {
+function addAccordion(logoUrl, teamName, teamBadge, teamText, teamID) {
   // <div class="home-container">
   //       <div class="accordion green lighten-1 row">
   //         <div class="col s8 m2 grey darken-3">
@@ -76,13 +76,13 @@ function addAccordion(logoUrl, teamName, teamBadge, teamText) {
   //           />
   //         </div>
   //         <span class="col m9"><h2 class="team-name">&TEAMNAME&</h2></span>
-  //         <span class="accordion-btn white col m1 s4"
+  //         <span id="accordion#ACCNUM#" class="accordion-btn white col m1 s4" onclick="rollout(#ACCNUM#)"
   //           ><h2>
   //             <i class="fas fa-caret-down fa-3x green-text lighten-1"></i></h2
   //         ></span>
   //       </div>
   //       <div
-  //         id="accordion1-rollout"
+  //         id="accordion#ACCNUM#-rollout"
   //         class="accordion-rollout row green lighten-1"
   //         style="display: none"
   //       >
@@ -101,14 +101,26 @@ function addAccordion(logoUrl, teamName, teamBadge, teamText) {
   //     </div>
 
   var accordionString =
-    "<div><div class='accordion green lighten-1 row'><div class='col s8 m2 grey darken-3'><img class='accordion-sports-logo' src='&TEAMLOGO&' /></div><span class='col m9'><h2 class='team-name'>&TEAMNAME&</h2></span><span class='accordion-btn white col m1 s4'><h2><i class='fas fa-caret-down fa-3x green-text lighten-1'></i></h2></span></div><div id='accordion1-rollout' class='accordion-rollout row green lighten-1' style='display: none'><div class='col s12 m3 grey darken-3 accordion-sports-badge'><img src='&TEAMBADGE&' class='accordion-sports-badge-badge' /></div><div class='col s12 m7'><p class='accordion-team-description'>&TEXT&</p></div></div></div>";
+    "<div><div class='accordion green lighten-1 row'><div class='col s8 m2 grey darken-3'><img class='accordion-sports-logo' src='&TEAMLOGO&' /></div><span class='col m9'><h2 class='team-name'>&TEAMNAME&</h2></span><span id='accordion#ACCNUM#' class='accordion-btn white col m1 s4' onclick='rollout(#ACCNUM#)'><h2><i class='fas fa-caret-down fa-3x green-text lighten-1'></i></h2></span></div><div id='accordion#ACCNUM#-rollout' class='accordion-rollout row green lighten-1' style='display: none'><div class='col s12 m3 grey darken-3 accordion-sports-badge'><img src='&TEAMBADGE&' class='accordion-sports-badge-badge' /></div><div class='col s12 m7'><p class='accordion-team-description'>&TEXT&</p></div></div></div>";
 
   var addedAccordion = accordionString.replace('&TEAMLOGO&', logoUrl);
   addedAccordion = addedAccordion.replace('&TEAMNAME&', teamName);
+  addedAccordion = addedAccordion.replace('#ACCNUM#', teamID);
+  addedAccordion = addedAccordion.replace('#ACCNUM#', teamID);
+  addedAccordion = addedAccordion.replace('#ACCNUM#', teamID);
   addedAccordion = addedAccordion.replace('&TEAMBADGE&', teamBadge);
   addedAccordion = addedAccordion.replace('&TEXT&', teamText);
 
   return addedAccordion;
+}
+
+function rollout(index) {
+  var element = '#accordion' + index + '-rollout';
+  if (!jQuery(element).is(':visible')) {
+    jQuery(element).slideDown();
+  } else {
+    jQuery(element).slideUp();
+  }
 }
 
 //Run Functions
