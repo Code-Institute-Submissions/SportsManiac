@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
@@ -23,98 +22,160 @@
   </head>
   <body>
     <!--Header Section-->
-    <section id="home-header">
+    <header id="home-header">
       <div class="home-header-title">
         <h1>SportsManiac <i class="fas fa-football-ball"></i></h1>
       </div>
-    </section>
-    <!--Slider Section-->
-    <section class="section grey darken-3 slider-section">
-      <div class="slider">
-        <ul class="slides">
-          <li>
-            <img src="./assets/images/carousel/audience_img_01.jpg" alt="" />
-            <div class="caption right-align">
-              <h3>Go crazy for Sport</h3>
-            </div>
-          </li>
-          <li>
-            <img src="./assets/images/carousel/sport_img_01.jpg" alt="" />
-            <div class="caption left-align">
-              <h3>Be a part of the Action</h3>
-            </div>
-          </li>
-          <li>
-            <img src="./assets/images/carousel/team_img_01.png" alt="" />
-            <div class="caption right-align">
-              <h3>Root for your Team</h3>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!--Search Bar Section-->
-    <section>
-      <div class="whiteLine2">
-        <div class="home-container">
-          <div class="grey darken-3 search-title">
-            <h2>Search For Your Team</h2>
-          </div>
-          <div class="input-field">
-            <div class="row">
-              <div class="col s10">
-                <input
-                  type="text"
-                  class="white grey-text autocomplete"
-                  placeholder="Boston, Aukland, etc..."
-                  id="search-input"
-                  required
-                />
+    </header>
+    <main id="search-page">
+      <!--Slider Section-->
+      <section class="section grey darken-3 slider-section">
+        <div class="slider">
+          <ul class="slides">
+            <li>
+              <img src="./assets/images/carousel/audience_img_01.jpg" alt="" />
+              <div class="caption right-align">
+                <h3>Go crazy for Sport</h3>
               </div>
-              <div class="col s2">
-                <div id="search-btn" class="btn search-btn green lighten-1">
-                  <h5>Search</h5>
+            </li>
+            <li>
+              <img src="./assets/images/carousel/sport_img_01.jpg" alt="" />
+              <div class="caption left-align">
+                <h3>Be a part of the Action</h3>
+              </div>
+            </li>
+            <li>
+              <img src="./assets/images/carousel/team_img_01.png" alt="" />
+              <div class="caption right-align">
+                <h3>Root for your Team</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--Search Bar Section-->
+      <section>
+        <div class="whiteLine2">
+          <div class="home-container">
+            <div class="grey darken-3 search-title">
+              <h2>Search For Your Team</h2>
+            </div>
+            <div class="input-field">
+              <div class="row">
+                <div class="col s10">
+                  <input
+                    type="text"
+                    class="white grey-text autocomplete"
+                    placeholder="Boston, Aukland, etc..."
+                    id="search-input"
+                    required
+                  />
+                </div>
+                <div class="col s2">
+                  <div id="search-btn" class="btn search-btn green lighten-1">
+                    <h5>Search</h5>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!--Sport Buttons Section-->
-    <section class="home-container">
-      <div class="row">
-        <div id="baseball" class="col red s4 m2 sport-btn center">
-          <h2><i class="fas fa-baseball-ball"></i></h2>
+      </section>
+      <!--Sport Buttons Section-->
+      <section class="home-container">
+        <div class="row">
+          <div id="baseball" class="col red s4 m2 sport-btn center">
+            <h2><i class="fas fa-baseball-ball"></i></h2>
+          </div>
+          <div id="soccer" class="col purple s4 m2 sport-btn center">
+            <h2><i class="fas fa-futbol"></i></h2>
+          </div>
+          <div id="football" class="col blue s4 m2 sport-btn center">
+            <h2><i class="fas fa-football-ball"></i></h2>
+          </div>
+          <div id="basketball" class="col cyan s4 m2 sport-btn center">
+            <h2><i class="fas fa-basketball-ball"></i></h2>
+          </div>
+          <div id="hockey" class="col yellow s4 m2 sport-btn center">
+            <h2><i class="fas fa-hockey-puck"></i></h2>
+          </div>
+          <div id="rugby" class="col black s4 m2 sport-btn center">
+            <h2>RG</h2>
+          </div>
         </div>
-        <div id="soccer" class="col purple s4 m2 sport-btn center">
-          <h2><i class="fas fa-futbol"></i></h2>
-        </div>
-        <div id="football" class="col blue s4 m2 sport-btn center">
-          <h2><i class="fas fa-football-ball"></i></h2>
-        </div>
-        <div id="basketball" class="col cyan s4 m2 sport-btn center">
-          <h2><i class="fas fa-basketball-ball"></i></h2>
-        </div>
-        <div id="hockey" class="col yellow s4 m2 sport-btn center">
-          <h2><i class="fas fa-hockey-puck"></i></h2>
-        </div>
-        <div id="rugby" class="col black s4 m2 sport-btn center">
-          <h2>RG</h2>
-        </div>
-      </div>
-    </section>
-    <!--Accordion Bar Section-->
-    <section id="accordions" class="home-container accordion-section">
-      <div class="space"></div>
-    </section>
+      </section>
+      <!--Accordion Bar Section-->
+      <section id="accordions" class="home-container accordion-section">
+        <div class="space"></div>
+      </section>
 
-    <div class="whiteLine"></div>
-    <!--Footer Section-->
-    <section class="footer-section grey darken-3">
-      <div class="container"></div>
-    </section>
+      <div class="whiteLine"></div>
+      <!--Footer Section-->
+      <section class="footer-section grey darken-3">
+        <div class="container"></div>
+      </section>
+    </main>
+    <!--------------------------------------------------------->
+    <!--------------------------------------------------------->
+    <!--Top Team Description-->
+    <main id="team-page" style="display: none">
+      <section class="home-container">
+        <div class="row">
+          <div class="col s12 m4 grey darken-3">
+            <img
+              class="team-Badge-main"
+              src="https://www.thesportsdb.com/images/media/team/badge/051sjd1537102179.png"
+            />
+          </div>
+          <div class="col s12 m8">
+            <div class="white">
+              <h2 class="team-title">Boston Celtics</h2>
+            </div>
+            <div class="team-full-desc"></div>
+          </div>
+        </div>
+      </section>
+      <section class="section home-container">
+        <div class="row">
+          <div class="col s2 red team-member"></div>
+          <div class="col s2 yellow team-member"></div>
+          <div class="col s2 black team-member"></div>
+          <div class="col s2 cyan team-member"></div>
+          <div class="col s2 purple team-member"></div>
+          <div class="col s2 orange team-member"></div>
+        </div>
+      </section>
+      <section class="section home-container">
+        <div class="stadium-section row">
+          <div class="col s12 m8"></div>
+          <div class="col s12 m4 grey darken-3 stadium-desc"></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="row">
+          <div class="col m9"></div>
+          <div class="col m3"></div>
+        </div>
+      </section>
+      <section>
+        <div class="home-container">
+          <div class="row">
+            <div class="col m4 yellow team-event"></div>
+            <div class="col m4 red team-event"></div>
+            <div class="col m4 orange team-event"></div>
+          </div>
+        </div>
+      </section>
+      <div class="whiteLine"></div>
+      <!--Footer Section-->
+      <section class="footer-section grey darken-3">
+        <div class="container"></div>
+      </section>
+    </main>
+    <!--------------------------------------------------------->
+    <!--------------------------------------------------------->
     <!--SCRIPTS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -129,7 +190,7 @@
         });
       });
     </script>
-    <script src="js/functions.js"></script>
+    <script src="js/utils.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

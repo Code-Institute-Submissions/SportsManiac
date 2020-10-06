@@ -3,8 +3,8 @@
 .accordion-rollout{margin:0 auto;width:95%;border:solid white;border-radius:2px}.accordion-sports-logo{width:100%;height:124px;object-fit:contain;float:left}
 .team-name{font-size:300%}.accordion-btn{height:124px}.accordion-btn i{line-height:.3 !important}
 .accordion-sports-badge{height:294px}.accordion-sports-badge-badge{height:250px;margin:25px;object-fit:contain}
-.accordion-team-description{font-size:x-large}.accordion-link{height:294px;text-align:center}
-.accordion-link-btn{margin-top:5%}.accordion-link-btn i{font-size:600%}@media only screen and (max-width:600px){.team-name{display:none}
+.accordion-team-description{font-size:x-large}.accordion-link{height:100%}.accordion-link-btn{height:100px}
+.accordion-link-btn-text{color:green}@media only screen and (max-width:600px){.team-name{display:none}
 }.footer-section{height:300px}.home-header-title{border-bottom:solid 4px}.home-header-title h1{color:#1f945b;background:white;padding:10px 0}
 .home-container{width:90%;margin:0 Auto;margin-top:30px}.home-sports-btns{margin-left:5%}
 .sport-btn{height:200px;cursor:pointer}.sport-btn i{font-size:200%}@media only screen and (max-width:768px){.sport-btn{height:100px}

@@ -58,16 +58,15 @@
 }
 
 .accordion-link {
-  height: 294px;
-  text-align: center;
+  height: 100%;
 }
 
 .accordion-link-btn {
-  margin-top: 5%;
+  height: 100px;
 }
 
-.accordion-link-btn i {
-  font-size: 600%;
+.accordion-link-btn-text {
+  color: green;
 }
 
 @media only screen and (max-width: 600px) {
