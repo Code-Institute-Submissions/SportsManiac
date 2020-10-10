@@ -118,37 +118,41 @@
     <!--------------------------------------------------------->
     <!--------------------------------------------------------->
     <!--Top Team Description-->
-    <main id="team-page" style="display: none">
+    <main id="team-page" style="display: none;">
       <section class="home-container">
         <div class="row">
           <div class="col s12 m4 grey darken-3">
             <img
+              id="teamBadge"
               class="team-Badge-main"
               src="https://www.thesportsdb.com/images/media/team/badge/051sjd1537102179.png"
             />
           </div>
           <div class="col s12 m8">
             <div class="white">
-              <h2 class="team-title">Boston Celtics</h2>
+              <h2 class="team-title" id="teamTitle">Boston Celtics</h2>
             </div>
-            <div class="team-full-desc"></div>
+            <div id="teamDesc" class="team-full-desc"></div>
           </div>
         </div>
       </section>
       <section class="section home-container">
-        <div class="row">
-          <div class="col s2 red team-member"></div>
-          <div class="col s2 yellow team-member"></div>
-          <div class="col s2 black team-member"></div>
-          <div class="col s2 cyan team-member"></div>
-          <div class="col s2 purple team-member"></div>
-          <div class="col s2 orange team-member"></div>
+        <div class="row grey darken-3">
+          <div id="teamMember0" class="col s2 team-member"></div>
+          <div id="teamMember1" class="col s2 team-member"></div>
+          <div id="teamMember2" class="col s2 team-member"></div>
+          <div id="teamMember3" class="col s2 team-member"></div>
+          <div id="teamMember4" class="col s2 team-member"></div>
+          <div id="teamMember5" class="col s2 team-member"></div>
         </div>
       </section>
       <section class="section home-container">
-        <div class="stadium-section row">
+        <div id="stadiumImg" class="stadium-section row">
           <div class="col s12 m8"></div>
-          <div class="col s12 m4 grey darken-3 stadium-desc"></div>
+          <div class="col s12 m4 grey darken-3">
+            <h4 id="stadiumTitle" class="stadium-title"></h4>
+            <p id="stadiumDesc" class="stadium-desc"></p>
+          </div>
         </div>
       </section>
       <section class="section">

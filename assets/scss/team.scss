@@ -19,18 +19,26 @@
 
 .team-member {
   height: 200px;
+  background: url('https://www.thesportsdb.com/images/media/team/stadium/yuyrvx1420576364.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .stadium-section {
   background: url('https://www.thesportsdb.com/images/media/team/stadium/yuyrvx1420576364.jpg');
-  height: 400px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.stadium-title {
+  padding: 10px;
+}
+
 .stadium-desc {
-  height: 100%;
+  padding: 10px;
+  min-height: 400px;
 }
 
 .team-event {

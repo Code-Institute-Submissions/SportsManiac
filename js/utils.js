@@ -24,7 +24,7 @@ async function getTeams(term, callback) {
 
 //get team by id
 async function getTeamById(teamId, callback) {
-  var url = API_URI + 'lookupteam.php?id=&ID&';
+  var url = API_URI + 'lookupteam.php?id=&PARAMETER&';
 
   processedUrl = processURL(url, teamId);
 
@@ -128,7 +128,7 @@ function addAccordion(
       </div><div id='accordion${teamIndex}-rollout' class='accordion-rollout row green lighten-1' style='display: none'>
       <div class='col s12 m3 grey darken-3 accordion-sports-badge'><img src='${teamBadge}' class='accordion-sports-badge-badge' />
       </div><div class='col s12 m7'><p class='accordion-team-description'>${teamText}</p><div class="col s12 m2 accordion-link">
-      <div class="btn-large white accordion-link-btn" onclick="storeTeam(${teamId})"><h4 class="accordion-link-btn-text">Read More</h4></div></div></div></div></div>`;
+      <div class="btn-large white accordion-link-btn" onclick="teamRollout(${teamId})"><h4 class="accordion-link-btn-text">Read More</h4></div></div></div></div></div>`;
 
   return accordionString;
 }
@@ -292,7 +292,36 @@ function rugbyAccordion(dataArr) {
   jQuery('#accordions').html(accordionArray);
 }
 
-function storeTeam(teamId) {
+//Store the team data in the store object
+function storeTeam(teamObj){
+  store.teamName = teamObj.teams[0].strTeam;
+  store.teamBadge = teamObj.teams[0].strTeamBadge;
+  store.teamDesc = teamObj.teams[0].strDescriptionEN;
+  store.teamStadiumImg = teamObj.teams[0].strStadiumThumb;
+  store.teamStadiumName = teamObj.teams[0].strStadium;
+  store.teamStadiumDesc = teamObj.teams[0].strStadiumDescription;
+}
+
+//Populate the Team Rollout with the selected teams data
+async function teamRollout(teamId) {
+  await getTeamById(teamId, storeTeam);
+
+  jQuery('#teamBadge').attr('src', store.teamBadge);
+  jQuery('#teamTitle').html(store.teamName);
+  jQuery('#teamDesc').html(store.teamDesc);
+  jQuery('#stadiumImg').css(`background`, `url(${store.teamStadiumImg})`)
+  jQuery('#stadiumDesc').html(store.teamStadiumDesc);
+  jQuery('#stadiumTitle').html(store.teamStadiumName);
+
+  // store.teamPlayers.forEach((member, index) =>{
+  //   jQuery(`#teamMember${index}`).css(
+  //     {
+  //       'background' : `url(${member.playerThumb})`,
+  //     'background-size': 'contain',
+  //     'background-repeat': 'no-repeat',
+  //     'background-position' : 'center'
+  //     });
+  // })
   jQuery('#search-page').hide();
   jQuery('#team-page').show();
 }

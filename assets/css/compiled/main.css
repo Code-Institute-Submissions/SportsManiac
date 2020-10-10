@@ -15,6 +15,7 @@ h1{text-align:center;font-family:"Pridi",serif}h2{font-family:"Pridi",serif}
 .search-data h5{line-height:normal}.slider-section{margin-top:30px;padding-bottom:50px;padding-top:50px}
 .slide-border{border-top:solid white 4px;border-bottom:solid white 4px;border-radius:5px}
 .team-Badge-main{height:500px;width:100%;object-fit:contain}.team-title{padding:10px;color:#1f945b;border-radius:5px}
-.team-full-desc{font-size:15px;padding:10px}.team-member{height:200px}.stadium-section{background:url("https://www.thesportsdb.com/images/media/team/stadium/yuyrvx1420576364.jpg");height:400px;background-position:center;background-repeat:no-repeat;background-size:cover}
-.stadium-desc{height:100%}.team-event{height:250px}
+.team-full-desc{font-size:15px;padding:10px}.team-member{height:200px;background:url("https://www.thesportsdb.com/images/media/team/stadium/yuyrvx1420576364.jpg");background-position:center;background-repeat:no-repeat;background-size:contain}
+.stadium-section{background:url("https://www.thesportsdb.com/images/media/team/stadium/yuyrvx1420576364.jpg");background-position:center;background-repeat:no-repeat;background-size:cover}
+.stadium-title{padding:10px}.stadium-desc{padding:10px;min-height:400px}.team-event{height:250px}
 /*# sourceMappingURL=main.css.map */
