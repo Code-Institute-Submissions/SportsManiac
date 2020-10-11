@@ -118,7 +118,7 @@
     <!--------------------------------------------------------->
     <!--------------------------------------------------------->
     <!--Top Team Description-->
-    <main id="team-page" style="display: none;">
+    <main id="team-page">
       <section class="home-container">
         <div class="row">
           <div class="col s12 m4 grey darken-3">
@@ -137,13 +137,21 @@
         </div>
       </section>
       <section class="section home-container">
-        <div class="row grey darken-3">
-          <div id="teamMember0" class="col s2 team-member"></div>
-          <div id="teamMember1" class="col s2 team-member"></div>
-          <div id="teamMember2" class="col s2 team-member"></div>
-          <div id="teamMember3" class="col s2 team-member"></div>
-          <div id="teamMember4" class="col s2 team-member"></div>
-          <div id="teamMember5" class="col s2 team-member"></div>
+        <div id="teamCards" class="team-player-section grey darken-3">
+          <!-- <span class="team-card">
+            <div class="team-card-image">
+              <img src="https://www.thesportsdb.com/images/media/player/thumb/63arim1550940324.jpg" alt="">
+            </div>
+            <div class="team-card-playername">
+              Christian Vazquez
+            </div>
+            <div></div>
+          </span>
+          <span class="team-card"></span>
+          <span class="team-card"></span>
+          <span class="team-card"></span>
+          <span class="team-card"></span>
+          <span class="team-card"></span> -->
         </div>
       </section>
       <section class="section home-container">
@@ -152,21 +160,6 @@
           <div class="col s12 m4 grey darken-3">
             <h4 id="stadiumTitle" class="stadium-title"></h4>
             <p id="stadiumDesc" class="stadium-desc"></p>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="row">
-          <div class="col m9"></div>
-          <div class="col m3"></div>
-        </div>
-      </section>
-      <section>
-        <div class="home-container">
-          <div class="row">
-            <div class="col m4 yellow team-event"></div>
-            <div class="col m4 red team-event"></div>
-            <div class="col m4 orange team-event"></div>
           </div>
         </div>
       </section>
@@ -192,7 +185,11 @@
           transition: 500,
           interval: 6000,
         });
+
+        $('#carousel').carousel();
       });
+    </script>
+    <script>
     </script>
     <script src="js/utils.js"></script>
     <script src="js/app.js"></script>

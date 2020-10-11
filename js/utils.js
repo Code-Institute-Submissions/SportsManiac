@@ -34,10 +34,10 @@ async function getTeamById(teamId, callback) {
 }
 
 //get team members
-async function getTeamMembers(team, callback) {
-  var url = API_URI + 'searchplayers.php?t=&TEAM&';
+async function getTeamMembers(teamId, callback) {
+  var url = API_URI + 'lookup_all_players.php?id=&PARAMETER&';
 
-  processedUrl = processURL(url, team);
+  processedUrl = processURL(url, teamId);
 
   await axios.get(processedUrl).then((res) => {
     callback(res.data);
@@ -74,7 +74,6 @@ function searchForTeam(input) {
 //DOM manipulation Functions
 
 //Add an accordion for each team data packet returned
-
 function addAccordion(
   logoUrl,
   teamName,
@@ -131,6 +130,28 @@ function addAccordion(
       <div class="btn-large white accordion-link-btn" onclick="teamRollout(${teamId})"><h4 class="accordion-link-btn-text">Read More</h4></div></div></div></div></div>`;
 
   return accordionString;
+}
+
+//Return a string of HTMl to generate player cards
+function addTeamPlayerCards(playerArray){
+  // <span class="team-card">
+  //   <div class="team-card-image">
+  //     <img src="https://www.thesportsdb.com/images/media/player/thumb/63arim1550940324.jpg" alt="">
+  //   </div>
+  //   <div class="team-card-playername">
+  //     Christian Vazquez
+  //   </div>
+  // </span>
+
+  var playerCardHTML = '';
+
+  playerArray.forEach((player)=>{
+    playerCardHTML += `<span class="team-card"><div class="team-card-image">
+      <img src="${player.playerThumb}" alt=""></div><div class="team-card-playername">
+      ${player.playerName}</div></span>`;
+  })
+
+  return playerCardHTML;
 }
 
 //Dynamic Accordion Jquery slide down (used with above function)
@@ -302,9 +323,37 @@ function storeTeam(teamObj){
   store.teamStadiumDesc = teamObj.teams[0].strStadiumDescription;
 }
 
+//Push the team Players into the Store
+function storePlayers(teamObj){
+  teamObj.player.forEach((player) =>{
+    var newPlayer = {
+      playerId: player.idPlayer,
+      playerName: player.strPlayer,
+      playerThumb: player.strThumb,
+    };
+
+    store.teamPlayers.push(newPlayer);
+  })
+}
+
+//Reset the store to default
+function resetStore(){
+  store.teamBadge = '';
+  store.teamDesc = '';
+  store.teamEvents = [];
+  store.teamName = '';
+  store.teamPlayers = [];
+  store.teamStadiumDesc = '';
+  store.teamStadiumImg = '';
+  store.teamStadiumName = '';
+}
+
 //Populate the Team Rollout with the selected teams data
 async function teamRollout(teamId) {
+  resetStore();
+
   await getTeamById(teamId, storeTeam);
+  await getTeamMembers(teamId, storePlayers);
 
   jQuery('#teamBadge').attr('src', store.teamBadge);
   jQuery('#teamTitle').html(store.teamName);
@@ -312,6 +361,7 @@ async function teamRollout(teamId) {
   jQuery('#stadiumImg').css(`background`, `url(${store.teamStadiumImg})`)
   jQuery('#stadiumDesc').html(store.teamStadiumDesc);
   jQuery('#stadiumTitle').html(store.teamStadiumName);
+  jQuery('#teamCards').html(addTeamPlayerCards(store.teamPlayers));
 
   // store.teamPlayers.forEach((member, index) =>{
   //   jQuery(`#teamMember${index}`).css(
@@ -322,6 +372,6 @@ async function teamRollout(teamId) {
   //     'background-position' : 'center'
   //     });
   // })
-  jQuery('#search-page').hide();
-  jQuery('#team-page').show();
+  // jQuery('#search-page').hide();
+  // jQuery('#team-page').show();
 }
