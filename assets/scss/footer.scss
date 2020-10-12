@@ -3,3 +3,36 @@
 .footer-section {
   height: 300px;
 }
+
+.contact {
+  font-size: 20px;
+}
+
+.contact h4 {
+  text-decoration: underline;
+}
+
+.contact li {
+  margin-top: 20px;
+}
+
+.social {
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+.social h4 {
+  text-decoration: underline;
+}
+
+.social i {
+  padding: 10px;
+  color: white !important;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .footer-section {
+    height: 500px;
+  }
+}

@@ -112,6 +112,12 @@ function addTeamPlayerCards(playerArray){
   
 }
 
+function noDataAccordion(){
+  return `<div class="accordion green lighten-1">
+        <h2 class="nodata">No Data Found. <span>Try another term</span></h2>
+        </div>`
+}
+
 //Dynamic Accordion Jquery slide down (used with above function)
 function rollout(index) {
   var element = '#accordion' + index + '-rollout';
@@ -206,6 +212,9 @@ function buildAccordions(dataArr) {
       );
     });
   }
+  else{
+    accordionArray = noDataAccordion();
+  }
   jQuery('#accordions').html(accordionArray);
 }
 
@@ -227,6 +236,9 @@ function baseballAccordion(dataArr) {
         );
       }
     });
+  }
+  else{
+    accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
 }
@@ -250,6 +262,9 @@ function soccerAccordion(dataArr) {
         }
     });
   }
+  else{
+    accordionArray = noDataAccordion();
+  }
   jQuery('#accordions').html(accordionArray);
 }
 
@@ -271,6 +286,9 @@ function footballAccordion(dataArr) {
         );
         }
     });
+  }
+  else{
+    accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
 }
@@ -294,6 +312,9 @@ function basketBallAccordion(dataArr) {
       }
     });
   }
+  else{
+    accordionArray = noDataAccordion();
+  }
   jQuery('#accordions').html(accordionArray);
 }
 
@@ -316,6 +337,9 @@ function hockeyAccordion(dataArr) {
       }
     });
   }
+  else{
+    accordionArray = noDataAccordion();
+  }
   jQuery('#accordions').html(accordionArray);
 }
 
@@ -337,6 +361,9 @@ function rugbyAccordion(dataArr) {
         );
       }
     });
+  }
+  else{
+    accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
 }
