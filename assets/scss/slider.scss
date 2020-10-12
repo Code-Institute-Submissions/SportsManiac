@@ -1,3 +1,5 @@
+@import 'mixins/colors.scss', 'mixins/mixins.scss', 'mixins/fonts.scss';
+
 .slider-section {
   margin-top: 30px;
   padding-bottom: 50px;
@@ -8,4 +10,54 @@
   border-top: solid white 4px;
   border-bottom: solid white 4px;
   border-radius: 5px;
+}
+
+.slider-text-left {
+  background: rgba($color: $mainColor, $alpha: 0.5);
+  font-family: $title;
+  padding: 30px;
+  border-radius: 5px;
+  width: 50%;
+  float: right;
+}
+
+.slider-text-right {
+  background: rgba($color: $mainColor, $alpha: 0.5);
+  font-family: $title;
+  padding: 30px;
+  border-radius: 5px;
+  width: 50%;
+}
+
+.slider-text-left h3 {
+  text-decoration: underline;
+}
+
+.slider-text-right h3 {
+  text-decoration: underline;
+}
+
+.slider-text-left p {
+  font-size: 30px;
+  color: white !important;
+}
+
+.slider-text-right p {
+  font-size: 30px;
+  color: white !important;
+}
+
+@media screen and (max-width: 1192px) {
+  .search-btn span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .slider-text-right {
+    width: 100%;
+  }
+  .slider-text-left {
+    width: 100%;
+  }
 }
