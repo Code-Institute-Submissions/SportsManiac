@@ -10,19 +10,13 @@
   margin-left: 5%;
 }
 .sport-btn {
-  height: 200px;
+  height: 170px;
   cursor: pointer;
 }
 
 .sport-btn i {
-  font-size: 200%;
+  font-size: 100px;
 }
 
 @media only screen and (max-width: 600px) {
-}
-
-@media only screen and (max-width: 768px) {
-  .sport-btn {
-    height: 100px;
-  }
 }

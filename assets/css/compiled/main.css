@@ -7,13 +7,13 @@
 .accordion-link-btn-text{color:green}@media only screen and (max-width:600px){.team-name{display:none}
 }.footer-section{height:300px}.home-header-title{border-bottom:solid 4px}.home-header-title h1{color:#1f945b;background:white;padding:10px 0}
 .home-container{width:90%;margin:0 Auto;margin-top:30px}.home-sports-btns{margin-left:5%}
-.sport-btn{height:200px;cursor:pointer}.sport-btn i{font-size:200%}@media only screen and (max-width:768px){.sport-btn{height:100px}
-}body{background-color:#1f945b;color:white;font-family:"Open Sans"}
+.sport-btn{height:170px;cursor:pointer}.sport-btn i{font-size:100px}body{background-color:#1f945b;color:white;font-family:"Open Sans"}
 h1{text-align:center;font-family:"Pridi",serif}h2{font-family:"Pridi",serif}
 .space{margin:40px}.whiteLine{border-top:solid 4px white;margin-bottom:60px}.whiteLine2{border-top:solid 4px white;margin-bottom:60px;margin-top:60px}
-.search-title{color:#1f945b;padding-left:30px;border-radius:5px}.search-btn{height:45px;width:100%}
+.search-title{color:#1f945b;padding-left:30px;border-radius:5px}.search-btn{height:45px;width:100%;padding-top:5px;font-size:25px;font-family:"Pridi",serif}
 .search-data h5{line-height:normal}.slider-section{margin-top:30px;padding-bottom:50px;padding-top:50px}
 .slide-border{border-top:solid white 4px;border-bottom:solid white 4px;border-radius:5px}
+.back-btn{margin:0 auto;width:20%;margin-top:30px;height:100px}.back-btn button{width:100%;height:50px;border-radius:10px;background:white;color:#1f945b;font-family:"Pridi",serif;font-size:25px}
 .team-Badge-main{height:500px;width:100%;object-fit:contain}.team-title{padding:10px;color:#1f945b;border-radius:5px}
 .team-full-desc{font-size:15px;padding:10px}.team-player-section{padding:20px;height:460px;overflow:auto;white-space:nowrap;overflow-y:hidden}
 .team-card{height:400px;width:300px;background:#2bcf80;margin-right:20px;display:inline-block;border-radius:5px;vertical-align:top}

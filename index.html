@@ -4,15 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SportsManiac</title>
+    <script src="https://kit.fontawesome.com/70b567918d.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
-      crossorigin="anonymous"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Pridi:wght@500&display=swap"
@@ -73,7 +68,7 @@
                 </div>
                 <div class="col s2">
                   <div id="search-btn" class="btn search-btn green lighten-1">
-                    <h5>Search</h5>
+                    Search
                   </div>
                 </div>
               </div>
@@ -85,13 +80,13 @@
       <section class="home-container">
         <div class="row">
           <div id="baseball" class="col red s4 m2 sport-btn center">
-            <h2><i class="fas fa-baseball-ball"></i></h2>
+            <h2><i class="fas fa-baseball"></i></h2>
           </div>
           <div id="soccer" class="col purple s4 m2 sport-btn center">
             <h2><i class="fas fa-futbol"></i></h2>
           </div>
           <div id="football" class="col blue s4 m2 sport-btn center">
-            <h2><i class="fas fa-football-ball"></i></h2>
+            <h2><i class="fas fa-football-helmet"></i></h2>
           </div>
           <div id="basketball" class="col cyan s4 m2 sport-btn center">
             <h2><i class="fas fa-basketball-ball"></i></h2>
@@ -100,7 +95,7 @@
             <h2><i class="fas fa-hockey-puck"></i></h2>
           </div>
           <div id="rugby" class="col black s4 m2 sport-btn center">
-            <h2>RG</h2>
+            <h2><i class="fas fa-football-ball"></i></h2>
           </div>
         </div>
       </section>
@@ -118,7 +113,12 @@
     <!--------------------------------------------------------->
     <!--------------------------------------------------------->
     <!--Top Team Description-->
-    <main id="team-page">
+    <main id="team-page" style="display: none;">
+      <div class="back-btn">
+        <button class="btn" onclick="backButton()">
+          Back
+        </button>
+      </div>
       <section class="home-container">
         <div class="row">
           <div class="col s12 m4 grey darken-3">
@@ -138,20 +138,6 @@
       </section>
       <section class="section home-container">
         <div id="teamCards" class="team-player-section grey darken-3">
-          <!-- <span class="team-card">
-            <div class="team-card-image">
-              <img src="https://www.thesportsdb.com/images/media/player/thumb/63arim1550940324.jpg" alt="">
-            </div>
-            <div class="team-card-playername">
-              Christian Vazquez
-            </div>
-            <div></div>
-          </span>
-          <span class="team-card"></span>
-          <span class="team-card"></span>
-          <span class="team-card"></span>
-          <span class="team-card"></span>
-          <span class="team-card"></span> -->
         </div>
       </section>
       <section class="section home-container">
@@ -164,6 +150,11 @@
         </div>
       </section>
       <div class="whiteLine"></div>
+      <div class="back-btn">
+        <button class="btn" onclick="backButton()">
+          Back
+        </button>
+      </div>
       <!--Footer Section-->
       <section class="footer-section grey darken-3">
         <div class="container"></div>

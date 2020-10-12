@@ -82,43 +82,6 @@ function addAccordion(
   teamIndex,
   teamId
 ) {
-  // <div class="home-container">
-  //       <div class="accordion green lighten-1 row">
-  //         <div class="col s8 m2 grey darken-3">
-  //           <img
-  //             class="accordion-sports-logo"
-  //             src="&TEAMLOGO&"
-  //           />
-  //         </div>
-  //         <span class="col m9"><h2 class="team-name">&TEAMNAME&</h2></span>
-  //         <span id="accordion#ACCNUM#" class="accordion-btn white col m1 s4" onclick="rollout(#ACCNUM#)"
-  //           ><h2>
-  //             <i class="fas fa-caret-down fa-3x green-text lighten-1"></i></h2
-  //         ></span>
-  //       </div>
-  //       <div
-  //         id="accordion#ACCNUM#-rollout"
-  //         class="accordion-rollout row green lighten-1"
-  //         style="display: none"
-  //       >
-  //         <div class="col s12 m3 grey darken-3 accordion-sports-badge">
-  //           <img
-  //             src="&TEAMBADGE&"
-  //             class="accordion-sports-badge-badge"
-  //           />
-  //         </div>
-  //         <div class="col s12 m7">
-  //           <p class="accordion-team-description">
-  //             &TEXT&
-  //           </p>
-  //         </div>
-  // <div class="col s12 m2 accordion-link">
-  //   <div class="btn-large white accordion-link-btn" onclick="storeTeam()">
-  //     <h4 class="accordion-link-btn-text">Read More</h4>
-  //   </div>
-  // </div>
-  //       </div>
-  //     </div>
 
   var accordionString = `<div><div class='accordion green lighten-1 row'><div class='col s8 m2 grey darken-3'>
     <img class='accordion-sports-logo' src='${logoUrl}' /></div><span class='col m9'>
@@ -134,14 +97,6 @@ function addAccordion(
 
 //Return a string of HTMl to generate player cards
 function addTeamPlayerCards(playerArray){
-  // <span class="team-card">
-  //   <div class="team-card-image">
-  //     <img src="https://www.thesportsdb.com/images/media/player/thumb/63arim1550940324.jpg" alt="">
-  //   </div>
-  //   <div class="team-card-playername">
-  //     Christian Vazquez
-  //   </div>
-  // </span>
 
   var playerCardHTML = '';
 
@@ -372,6 +327,12 @@ async function teamRollout(teamId) {
   //     'background-position' : 'center'
   //     });
   // })
-  // jQuery('#search-page').hide();
-  // jQuery('#team-page').show();
+  jQuery('#search-page').hide();
+  jQuery('#team-page').show();
+  window.scroll({top: 0, left: 0});
+}
+
+function backButton(){
+  jQuery('#team-page').hide();
+  jQuery('#search-page').show();
 }
