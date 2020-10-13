@@ -83,24 +83,53 @@ function addAccordion(
   teamId
 ) {
 
-  var accordionString = `<div><div class='accordion green lighten-1 row'><div class='col s8 m2 grey darken-3'>
-    <img class='accordion-sports-logo' src='${logoUrl}' /></div><span class='col m9'>
-      <h2 class='team-name'>${teamName}</h2></span><span id='accordion${teamIndex}' class='accordion-btn white col m1 s4' onclick='rollout(${teamIndex})'>
-      <h2><i class='fas fa-caret-down fa-3x green-text lighten-1'></i></h2></span>
-      </div><div id='accordion${teamIndex}-rollout' class='accordion-rollout row green lighten-1' style='display: none'>
-      <div class='col s12 m3 grey darken-3 accordion-sports-badge'><img src='${teamBadge}' class='accordion-sports-badge-badge' />
-      </div><div class='col s12 m7'><p class='accordion-team-description'>${teamText}</p><div class="col s12 m2 accordion-link">
-      <div class="btn-large white accordion-link-btn" onclick="teamRollout(${teamId})"><h4 class="accordion-link-btn-text">Read More</h4></div></div></div></div></div>`;
+
+  // <div>
+  //       <div class='accordion green lighten-1 row'>
+  //         <div class='col s8 m4 l2 grey darken-3'>
+  //           <img class='accordion-sports-logo' src='${logoUrl}' />
+  //         </div>
+  //         <span class='col m6 l9'>
+  //           <h2 class='team-name'>${teamName}</h2>
+  //         </span>
+  //         <span id='accordion${teamIndex}' class='accordion-btn white col s4 m2 l1 ' onclick='rollout(${teamIndex})'>
+  //           <h2><i class='fas fa-caret-down fa-3x green-text lighten-1'></i></h2>
+  //         </span>
+  //       </div>
+  //       <div id='accordion${teamIndex}-rollout' class='accordion-rollout row green lighten-1' style='display: block'>
+  //         <div class='col s12 l3 grey darken-3 accordion-sports-badge'>
+  //           <img src='${teamBadge}' class='accordion-sports-badge-badge' />
+  //         </div>
+  //         <div class='col s12 l7'>
+  //           <p class='accordion-team-description'>${teamText}</p>
+  //         </div>
+  //         <div class="col s12 l2 accordion-link grey darken-3">
+  //           <div class="btn white accordion-link-btn" onclick="teamRollout(${teamId})">
+  //             <span class="accordion-link-btn-text">Read More</span>
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+
+  var accordionString = `<div><div class='accordion green lighten-1 row'><div class='col s8 m4 l2 grey darken-3'>
+                          <img class='accordion-sports-logo' src='${logoUrl}' /></div><span class='col m6 l9'>
+                          <h2 class='team-name'>${teamName}</h2></span><span id='accordion${teamIndex}' class='accordion-btn white col s4 m2 l1 ' onclick='rollout(${teamIndex})'>
+                          <h2><i class='fas fa-caret-down fa-3x green-text lighten-1'></i></h2></span></div>
+                          <div id='accordion${teamIndex}-rollout' class='accordion-rollout row green lighten-1' style='display: none'>
+                          <div class='col s12 l3 grey darken-3 accordion-sports-badge'><img src='${teamBadge}' class='accordion-sports-badge-badge' />
+                          </div><div class='col s12 l7'><p class='accordion-team-description'>${teamText}</p></div>
+                          <div class="col s12 l2 accordion-link grey darken-3"><div class="btn white accordion-link-btn" onclick="teamRollout(${teamId})">
+                          <span class="accordion-link-btn-text">Read More</span></div></div></div></div>` ;
 
   return accordionString;
 }
 
 //Return a string of HTMl to generate player cards
-function addTeamPlayerCards(playerArray){
-  if(playerArray){
+function addTeamPlayerCards(playerArray) {
+  if (playerArray) {
     var playerCardHTML = '';
 
-    playerArray.forEach((player)=>{
+    playerArray.forEach((player) => {
       playerCardHTML += `<span class="team-card"><div class="team-card-image">
         <img src="${player.playerThumb}" alt=""></div><div class="team-card-playername">
         ${player.playerName}</div></span>`;
@@ -109,10 +138,10 @@ function addTeamPlayerCards(playerArray){
     return playerCardHTML;
 
   }
-  
+
 }
 
-function noDataAccordion(){
+function noDataAccordion() {
   return `<div class="accordion green lighten-1">
         <h2 class="nodata">No Data Found. <span>Try another term</span></h2>
         </div>`
@@ -146,13 +175,13 @@ function filterSport(input, sport) {
 }
 
 //Check if theres a Team logo.  If not replace with defaults
-function checkLogo(obj){
-  if(obj.strTeamLogo){
+function checkLogo(obj) {
+  if (obj.strTeamLogo) {
     return obj.strTeamLogo
   }
 
   var sport = obj.strSport;
-  switch(sport){
+  switch (sport) {
     case 'Baseball':
       return `./assets/images/icons/baseball-solid.svg`;
     case 'Soccer':
@@ -171,13 +200,13 @@ function checkLogo(obj){
 }
 
 //Check if theres a Team Badge.  If not replace with defaults
-function checkBadge(obj){
-  if(obj.strTeamLogo){
+function checkBadge(obj) {
+  if (obj.strTeamLogo) {
     return obj.strTeamBadge
   }
 
   var sport = obj.strSport;
-  switch(sport){
+  switch (sport) {
     case 'Baseball':
       return `./assets/images/icons/baseball-solid.svg`;
     case 'Soccer':
@@ -212,7 +241,7 @@ function buildAccordions(dataArr) {
       );
     });
   }
-  else{
+  else {
     accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
@@ -223,7 +252,7 @@ function baseballAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
     dataArr.forEach((obj, index) => {
-      if (obj.strSport == 'Baseball'){
+      if (obj.strSport == 'Baseball') {
         var logo = checkLogo(obj);
         var badge = checkBadge(obj);
         accordionArray += addAccordion(
@@ -237,7 +266,7 @@ function baseballAccordion(dataArr) {
       }
     });
   }
-  else{
+  else {
     accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
@@ -248,7 +277,7 @@ function soccerAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
     dataArr.forEach((obj, index) => {
-      if (obj.strSport == 'Soccer'){
+      if (obj.strSport == 'Soccer') {
         var logo = checkLogo(obj);
         var badge = checkBadge(obj);
         accordionArray += addAccordion(
@@ -259,10 +288,10 @@ function soccerAccordion(dataArr) {
           index,
           obj.idTeam
         );
-        }
+      }
     });
   }
-  else{
+  else {
     accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
@@ -273,7 +302,7 @@ function footballAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
     dataArr.forEach((obj, index) => {
-      if (obj.strSport == 'American Football'){
+      if (obj.strSport == 'American Football') {
         var logo = checkLogo(obj);
         var badge = checkBadge(obj);
         accordionArray += addAccordion(
@@ -284,10 +313,10 @@ function footballAccordion(dataArr) {
           index,
           obj.idTeam
         );
-        }
+      }
     });
   }
-  else{
+  else {
     accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
@@ -298,7 +327,7 @@ function basketBallAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
     dataArr.forEach((obj, index) => {
-      if (obj.strSport == 'Basketball'){
+      if (obj.strSport == 'Basketball') {
         var logo = checkLogo(obj);
         var badge = checkBadge(obj);
         accordionArray += addAccordion(
@@ -312,7 +341,7 @@ function basketBallAccordion(dataArr) {
       }
     });
   }
-  else{
+  else {
     accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
@@ -323,7 +352,7 @@ function hockeyAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
     dataArr.forEach((obj, index) => {
-      if (obj.strSport == 'Ice Hockey'){
+      if (obj.strSport == 'Ice Hockey') {
         var logo = checkLogo(obj);
         var badge = checkBadge(obj);
         accordionArray += addAccordion(
@@ -337,7 +366,7 @@ function hockeyAccordion(dataArr) {
       }
     });
   }
-  else{
+  else {
     accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
@@ -348,7 +377,7 @@ function rugbyAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
     dataArr.forEach((obj, index) => {
-      if (obj.strSport == 'Rugby'){
+      if (obj.strSport == 'Rugby') {
         var logo = checkLogo(obj);
         var badge = checkBadge(obj);
         accordionArray += addAccordion(
@@ -362,14 +391,14 @@ function rugbyAccordion(dataArr) {
       }
     });
   }
-  else{
+  else {
     accordionArray = noDataAccordion();
   }
   jQuery('#accordions').html(accordionArray);
 }
 
 //Store the team data in the store object
-function storeTeam(teamObj){
+function storeTeam(teamObj) {
   store.teamName = teamObj.teams[0].strTeam;
   store.teamBadge = teamObj.teams[0].strTeamBadge;
   store.teamDesc = teamObj.teams[0].strDescriptionEN;
@@ -379,22 +408,22 @@ function storeTeam(teamObj){
 }
 
 //Push the team Players into the Store
-function storePlayers(teamObj){
-  if(teamObj.player){
-    teamObj.player.forEach((player) =>{
+function storePlayers(teamObj) {
+  if (teamObj.player) {
+    teamObj.player.forEach((player) => {
       var newPlayer = {
         playerId: player.idPlayer,
         playerName: player.strPlayer,
         playerThumb: player.strThumb,
       };
-  
+
       store.teamPlayers.push(newPlayer);
     })
-  } 
+  }
 }
 
 //Reset the store to default
-function resetStore(){
+function resetStore() {
   store.teamBadge = '';
   store.teamDesc = '';
   store.teamEvents = [];
@@ -419,17 +448,17 @@ async function teamRollout(teamId) {
   jQuery('#stadiumDesc').html(store.teamStadiumDesc);
   jQuery('#stadiumTitle').html(store.teamStadiumName);
 
-  if(store.teamPlayers){
+  if (store.teamPlayers) {
     jQuery('#teamCards').html(addTeamPlayerCards(store.teamPlayers));
   }
-  
+
   jQuery('#search-page').hide();
   jQuery('#team-page').show();
-  window.scroll({top: 0, left: 0});
+  window.scroll({ top: 0, left: 0 });
 }
 
 //Back button to return to team search
-function backButton(){
+function backButton() {
   jQuery('#team-page').hide();
   jQuery('#search-page').show();
 }
