@@ -83,38 +83,10 @@ function addAccordion(
   teamId
 ) {
 
-
-  // <div>
-  //       <div class='accordion green lighten-1 row'>
-  //         <div class='col s8 m4 l2 grey darken-3'>
-  //           <img class='accordion-sports-logo' src='${logoUrl}' />
-  //         </div>
-  //         <span class='col m6 l9'>
-  //           <h2 class='team-name'>${teamName}</h2>
-  //         </span>
-  //         <span id='accordion${teamIndex}' class='accordion-btn white col s4 m2 l1 ' onclick='rollout(${teamIndex})'>
-  //           <h2><i class='fas fa-caret-down fa-3x green-text lighten-1'></i></h2>
-  //         </span>
-  //       </div>
-  //       <div id='accordion${teamIndex}-rollout' class='accordion-rollout row green lighten-1' style='display: block'>
-  //         <div class='col s12 l3 grey darken-3 accordion-sports-badge'>
-  //           <img src='${teamBadge}' class='accordion-sports-badge-badge' />
-  //         </div>
-  //         <div class='col s12 l7'>
-  //           <p class='accordion-team-description'>${teamText}</p>
-  //         </div>
-  //         <div class="col s12 l2 accordion-link grey darken-3">
-  //           <div class="btn white accordion-link-btn" onclick="teamRollout(${teamId})">
-  //             <span class="accordion-link-btn-text">Read More</span>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-
   var accordionString = `<div><div class='accordion green lighten-1 row'><div class='col s8 m4 l2 grey darken-3'>
                           <img class='accordion-sports-logo' src='${logoUrl}' /></div><span class='col m6 l9'>
                           <h2 class='team-name'>${teamName}</h2></span><span id='accordion${teamIndex}' class='accordion-btn white col s4 m2 l1 ' onclick='rollout(${teamIndex})'>
-                          <h2><i class='fas fa-caret-down fa-3x green-text lighten-1'></i></h2></span></div>
+                          <span><i class='fas fa-caret-down fa-3x green-text lighten-1'></i></span></span></div>
                           <div id='accordion${teamIndex}-rollout' class='accordion-rollout row green lighten-1' style='display: none'>
                           <div class='col s12 l3 grey darken-3 accordion-sports-badge'><img src='${teamBadge}' class='accordion-sports-badge-badge' />
                           </div><div class='col s12 l7'><p class='accordion-team-description'>${teamText}</p></div>
@@ -399,10 +371,19 @@ function rugbyAccordion(dataArr) {
 
 //Store the team data in the store object
 function storeTeam(teamObj) {
+
+  var stadiumImage;
+  if (!teamObj.teams[0].strStadiumThumb) {
+    stadiumImage = './assets/images/icons/stadium_icon.png';
+  }
+  else {
+    stadiumImage = teamObj.teams[0].strStadiumThumb;
+  }
+
   store.teamName = teamObj.teams[0].strTeam;
   store.teamBadge = teamObj.teams[0].strTeamBadge;
   store.teamDesc = teamObj.teams[0].strDescriptionEN;
-  store.teamStadiumImg = teamObj.teams[0].strStadiumThumb;
+  store.teamStadiumImg = stadiumImage;
   store.teamStadiumName = teamObj.teams[0].strStadium;
   store.teamStadiumDesc = teamObj.teams[0].strStadiumDescription;
 }
@@ -411,10 +392,20 @@ function storeTeam(teamObj) {
 function storePlayers(teamObj) {
   if (teamObj.player) {
     teamObj.player.forEach((player) => {
+
+      var thumbnail;
+      if (!player.strThumb) {
+        thumbnail = './assets/images/icons/playerShirt.svg';
+      }
+
+      else if (player.strThumb) {
+        thumbnail = player.strThumb;
+      }
+
       var newPlayer = {
         playerId: player.idPlayer,
         playerName: player.strPlayer,
-        playerThumb: player.strThumb,
+        playerThumb: thumbnail,
       };
 
       store.teamPlayers.push(newPlayer);

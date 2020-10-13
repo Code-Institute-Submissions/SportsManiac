@@ -12,6 +12,11 @@
   padding-top: 5px;
   font-size: 25px;
   font-family: $title;
+  border-radius: 5px;
+}
+
+.search-btn:hover{
+  color: $mainGrey;
 }
 
 .search-data h5 {

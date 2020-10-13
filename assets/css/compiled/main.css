@@ -2,7 +2,7 @@
 .accordion{width:95%;height:130px;margin:0 auto;margin-bottom:20px;border-radius:2px;border:solid white;cursor:pointer}
 .accordion-rollout{margin:0 auto;width:95%;border:solid white;border-radius:2px;margin-bottom:30px}
 .accordion-sports-logo{width:100%;height:124px;object-fit:contain;float:left}.team-name{font-size:300%}
-.accordion-btn{height:124px}.accordion-btn i{line-height:.3 !important}.accordion-sports-badge{height:294px}
+.accordion-btn{height:124px}.accordion-btn i{padding-top:10px;font-size:100px}.accordion-sports-badge{height:294px}
 .accordion-sports-badge-badge{height:250px;margin:25px;object-fit:contain}.accordion-team-description{font-size:x-large;height:250px;width:100%;overflow:hidden;text-overflow:ellipsis}
 .accordion-link{height:294px;width:100%;padding:0 auto}.accordion-link-btn{height:60px;width:100%;padding-top:10px;margin-top:100px}
 .accordion-link-btn-text{font-family:"Pridi",serif;font-size:20px;color:#424242}
@@ -16,21 +16,24 @@
 body{background-color:#1f945b;color:white;font-family:"Open Sans"}h1{text-align:center;font-family:"Pridi",serif}
 h2{font-family:"Pridi",serif}.space{margin:40px}.whiteLine{border-top:solid 4px white;margin-bottom:60px}
 .whiteLine2{border-top:solid 4px white;margin-bottom:60px;margin-top:60px}.search-title{color:#1f945b;padding-left:30px;border-radius:5px}
-.search-btn{height:45px;width:100%;padding-top:5px;font-size:25px;font-family:"Pridi",serif}
-.search-data h5{line-height:normal}.slider-section{margin-top:30px;padding-bottom:50px;padding-top:50px}
+.search-btn{height:45px;width:100%;padding-top:5px;font-size:25px;font-family:"Pridi",serif;border-radius:5px}
+.search-btn:hover{color:#424242}.search-data h5{line-height:normal}.slider-section{margin-top:30px;padding-bottom:50px;padding-top:50px}
 .slide-border{border-top:solid white 4px;border-bottom:solid white 4px;border-radius:5px}
-.slider-text-left{background:rgba(31,148,91,0.5);font-family:"Pridi",serif;padding:30px;border-radius:5px;width:50%;float:right}
-.slider-text-right{background:rgba(31,148,91,0.5);font-family:"Pridi",serif;padding:30px;border-radius:5px;width:50%}
+.slider-text-left{background:rgba(18,92,56,0.5);font-family:"Pridi",serif;padding:30px;border-radius:5px;width:50%;float:right}
+.slider-text-right{background:rgba(18,92,56,0.5);font-family:"Pridi",serif;padding:30px;border-radius:5px;width:50%}
 .slider-text-left h3{text-decoration:underline}.slider-text-right h3{text-decoration:underline}
 .slider-text-left p{font-size:30px;color:white !important}.slider-text-right p{font-size:30px;color:white !important}
 @media screen and (max-width:1192px){.search-btn span{display:none}}@media screen and (max-width:900px){.slider-text-right{width:100%}
 .slider-text-left{width:100%}}.back-btn{margin:0 auto;width:20%;margin-top:30px;height:100px}
 .back-btn button{width:100%;height:50px;border-radius:10px;background:white;color:#1f945b;font-family:"Pridi",serif;font-size:25px}
-.team-Badge-main{height:500px;width:100%;object-fit:contain}.team-title{padding:10px;color:#1f945b;border-radius:5px}
-.team-full-desc{font-size:15px;padding:10px}.team-player-section{padding:20px;height:460px;overflow:auto;white-space:nowrap;overflow-y:hidden}
+.back-btn button:hover{background:#125c38;color:white;border:3px solid white}.team-Badge-main{height:500px;width:100%;object-fit:contain;border-radius:5px}
+.team-title{padding:10px;color:#1f945b;border-radius:10px}.team-full-desc{font-size:20px;padding:20px;height:350px;overflow:scroll;overflow-x:hidden;background:#125c38;border-radius:7px}
+.team-player-section{padding:20px;height:460px;overflow:auto;white-space:nowrap;overflow-y:hidden}
 .team-card{height:400px;width:300px;background:#2bcf80;margin-right:20px;display:inline-block;border-radius:5px;vertical-align:top}
 .team-card-image{width:90%;height:300px;margin:0 auto;margin-top:10px;border-radius:5px}
 .team-card-image img{width:100%;height:100%;object-fit:contain}.team-card-playername{width:90%;height:60px;margin:0 auto;text-align:center;padding:10px;font-family:"Pridi",serif;font-size:25px;background:#125c38;color:#2bcf80;border-radius:3px}
-.stadium-section{background:url("https://www.thesportsdb.com/images/media/team/stadium/yuyrvx1420576364.jpg");background-position:center;background-repeat:no-repeat;background-size:cover}
-.stadium-title{padding:10px}.stadium-desc{padding:10px;min-height:400px}.team-event{height:250px}
+.stadium-section{background:url("https://www.thesportsdb.com/images/media/team/stadium/yuyrvx1420576364.jpg");background-position:center;background-repeat:no-repeat;background-size:cover;border-radius:5px}
+.stadium-desc-box{border-radius:5px}.stadium-title{padding:10px;font-family:"Pridi",serif;background:white;color:#424242;border-radius:5px}
+.stadium-desc{padding:20px;height:400px;overflow:scroll;overflow-x:hidden;font-size:20px}
+.team-event{height:250px}
 /*# sourceMappingURL=main.css.map */

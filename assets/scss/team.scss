@@ -17,21 +17,33 @@
   font-size: 25px;
 }
 
+.back-btn button:hover{
+  background: $dark-1-mainColor;
+  color: white;
+  border: 3px solid white;
+}
+
 .team-Badge-main {
   height: 500px;
   width: 100%;
   object-fit: contain;
+  border-radius: 5px;
 }
 
 .team-title {
   padding: 10px;
   color: $mainColor;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .team-full-desc {
-  font-size: 15px;
-  padding: 10px;
+  font-size: 20px;
+  padding: 20px;
+  height: 350px;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: $dark-1-mainColor;
+  border-radius: 7px;
 }
 
 .team-player-section {
@@ -84,15 +96,27 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 5px;
+}
+
+.stadium-desc-box{
+  border-radius: 5px;
 }
 
 .stadium-title {
   padding: 10px;
+  font-family: $title;
+  background: white;
+  color: $mainGrey;
+  border-radius: 5px;
 }
 
 .stadium-desc {
-  padding: 10px;
-  min-height: 400px;
+  padding: 20px;
+  height: 400px;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-size: 20px;
 }
 
 .team-event {
