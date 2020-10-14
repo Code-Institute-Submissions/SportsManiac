@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="../assets/css/compiled/main.css" />
-    <title>Sports Mainiac Testing</title>
-  </head>
-  <body>
-    <div class="section">
-      <h1>Testing Doc</h1>
-      <p>
-        This is a testing HTML. You can use this to test the functions found in
-        '../js/functions.js
-      </p>
-      <p>
-        Use the Developer tools and the console to check if code is running
-        properly
-      </p>
-    </div>
-    <div class="section">
-      <div id="accordion-test"></div>
-    </div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/dotenv@8.2.0/lib/main.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../js/utils.js"></script>
-    <script src="../js/app.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/compiled/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.min.css"
+    integrity="sha512-VmXOc/75WLdJSABvh3ovbpXUxqO/tyW29GcmNZz0sRwQHRqBIAq61kAGITx5v2YPuvG07y8m522WVYKpRB6rxw=="
+    crossorigin="anonymous" />
+  <title>Sports Mainiac Testing</title>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/dotenv@8.2.0/lib/main.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/app.js"></script>
+  <!-- jasmine Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine.min.js"
+    integrity="sha512-hSiRgmBWJ4Up/wGCaolTZ6HaOgkzTwS2Z4vQWY9jqDK8Tov+GzQKy0PcgIYoOi1WtZ3+hWNkgSDMyGaMGb4ybg=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/jasmine-html.js"
+    integrity="sha512-bqig44hBpNuvBzxsqbHiqwRximGm4UfJAvOeNQHjB7++0D2u/3bcw4ZwmVsqrooii2UJ91oDI/6aANdp3BwcQQ=="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.6.0/boot.js"
+    integrity="sha512-igPP1Xd0hsvXVZGyfIYeUD779NLEA1Sj/5ts2C/e/22zeUqR6ehA7M/nNLuONalznkHQkGPBESNwzGpwBQD60g=="
+    crossorigin="anonymous"></script>
+  <!-- load scripts -->
+  <script src="./scripts/processURL.js"></script>
+  <script src="./scripts/checkBadge.js"></script>
+  <script src="./scripts/checkLogo.js"></script>
+  <!-- load tests -->
+  <script src="./spec/processURLSpec.js"></script>
+  <script src="./spec/checkBadgeSpec.js"></script>
+  <script src="./spec/checkLogoSpec.js"></script>
+</head>
+
+<body>
+  <div class="section">
+    <h1>Testing Doc</h1>
+    <p>
+      This is a testing HTML. You can use this to test the functions found in
+      '../js/utils.js
+    </p>
+    <p>
+      Use the Developer tools and the console to check if code is running
+      properly
+    </p>
+  </div>
+  <div class="section">
+    <div id="accordion-test"></div>
+  </div>
+
+</body>
+
 </html>

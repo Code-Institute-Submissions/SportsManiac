@@ -173,7 +173,7 @@ function checkLogo(obj) {
 
 //Check if theres a Team Badge.  If not replace with defaults
 function checkBadge(obj) {
-  if (obj.strTeamLogo) {
+  if (obj.strTeamBadge) {
     return obj.strTeamBadge
   }
 
