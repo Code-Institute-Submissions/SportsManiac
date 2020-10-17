@@ -1,22 +1,26 @@
-//Store Object for state management
+// Store Object for state management
 var store = {
-  teamBadge:'',
+  teamBadge: '',
   teamName: '',
   teamDesc: ``,
   teamPlayers: [],
-  teamStadiumImg:'',
+  teamStadiumImg: '',
   teamStadiumName: '',
   teamStadiumDesc: ``,
   teamEvents: [],
 };
 
-//Document app functions
+// Document app functions
 $(document).ready(() => {
+
+  var filter = $('#sportFilter');
+
   $('#search-btn').click(() => {
     var input = $('#search-input').val();
     if (input) {
       searchForTeam(input);
     }
+    filter.show();
   });
 
   $('#baseball').click(() => {

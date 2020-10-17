@@ -11,7 +11,7 @@ function processURL(url, parameter) {
 
 //AXIOS functions
 
-//get teams
+// Gets teams based on search term passed
 async function getTeams(term, callback) {
   var url = API_URI + 'searchteams.php?t=&PARAMETER&';
 
@@ -22,7 +22,7 @@ async function getTeams(term, callback) {
   });
 }
 
-//get team by id
+// Gets the team based on ID passed
 async function getTeamById(teamId, callback) {
   var url = API_URI + 'lookupteam.php?id=&PARAMETER&';
 
@@ -33,7 +33,7 @@ async function getTeamById(teamId, callback) {
   });
 }
 
-//get team members
+// Gets the team members for selected team
 async function getTeamMembers(teamId, callback) {
   var url = API_URI + 'lookup_all_players.php?id=&PARAMETER&';
 
@@ -44,36 +44,14 @@ async function getTeamMembers(teamId, callback) {
   });
 }
 
-//get next 5 events
-async function getTeamEventsNext(teamId, callback) {
-  var url = API_URI + 'eventsnext.php?id=&ID&';
-
-  processedUrl = processURL(url, teamId);
-
-  await axios.get(processedUrl).then((res) => {
-    callback(res.data);
-  });
-}
-
-//get last 5 events
-async function getTeamEventsLast(teamId, callback) {
-  var url = API_URI + 'eventslast.php?id=&ID&';
-
-  processedUrl = processURL(url, teamId);
-
-  await axios.get(processedUrl).then((res) => {
-    callback(res.data);
-  });
-}
-
-//Function call for getTeams Axios function
+// Function call for getTeams Axios function
 function searchForTeam(input) {
   getTeams(input, buildAccordions);
 }
 
 //DOM manipulation Functions
 
-//Add an accordion for each team data packet returned
+// Adds an accordion for each team data packet returned
 function addAccordion(
   logoUrl,
   teamName,
@@ -83,7 +61,7 @@ function addAccordion(
   teamId
 ) {
 
-  var accordionString = `<div><div class='accordion green lighten-1 row'><div class='col s8 m4 l2 grey darken-3'>
+  return `<div><div class='accordion green lighten-1 row'><div class='col s8 m4 l2 grey darken-3'>
                           <img class='accordion-sports-logo' src='${logoUrl}' /></div><span class='col m6 l9'>
                           <h2 class='team-name'>${teamName}</h2></span><span id='accordion${teamIndex}' class='accordion-btn white col s4 m2 l1 ' onclick='rollout(${teamIndex})'>
                           <span><i class='fas fa-caret-down fa-3x green-text lighten-1'></i></span></span></div>
@@ -93,7 +71,7 @@ function addAccordion(
                           <div class="col s12 l2 accordion-link grey darken-3"><div class="btn white accordion-link-btn" onclick="teamRollout(${teamId})">
                           <span class="accordion-link-btn-text">Read More</span></div></div></div></div>` ;
 
-  return accordionString;
+
 }
 
 //Return a string of HTMl to generate player cards
@@ -113,6 +91,7 @@ function addTeamPlayerCards(playerArray) {
 
 }
 
+// Adds an accordion if theres no data related to search term 
 function noDataAccordion() {
   return `<div class="accordion green lighten-1">
         <h2 class="nodata">No Data Found. <span>Try another term</span></h2>
@@ -146,7 +125,7 @@ function filterSport(input, sport) {
   }
 }
 
-//Check if theres a Team logo.  If not replace with defaults
+// Check if theres a Team logo.  If not replace with defaults
 function checkLogo(obj) {
   if (obj.strTeamLogo) {
     return obj.strTeamLogo
@@ -171,7 +150,7 @@ function checkLogo(obj) {
   }
 }
 
-//Check if theres a Team Badge.  If not replace with defaults
+// Check if theres a Team Badge.  If not replace with defaults
 function checkBadge(obj) {
   if (obj.strTeamBadge) {
     return obj.strTeamBadge
@@ -196,7 +175,7 @@ function checkBadge(obj) {
   }
 }
 
-//Build unfiltered accordions from search
+// Build unfiltered accordions from search
 function buildAccordions(dataArr) {
   accordionArray = '';
   if (dataArr) {
@@ -219,7 +198,7 @@ function buildAccordions(dataArr) {
   jQuery('#accordions').html(accordionArray);
 }
 
-//Build Filtered accordion displaying only baseball teams
+// Build Filtered accordion displaying only baseball teams
 function baseballAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
@@ -244,7 +223,7 @@ function baseballAccordion(dataArr) {
   jQuery('#accordions').html(accordionArray);
 }
 
-//Build Filtered accordion displaying only soccer teams
+// Build Filtered accordion displaying only soccer teams
 function soccerAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
@@ -269,7 +248,7 @@ function soccerAccordion(dataArr) {
   jQuery('#accordions').html(accordionArray);
 }
 
-//Build Filtered accordion displaying only american football teams
+// Build Filtered accordion displaying only american football teams
 function footballAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
@@ -294,7 +273,7 @@ function footballAccordion(dataArr) {
   jQuery('#accordions').html(accordionArray);
 }
 
-//Build Filtered accordion displaying only basketball teams
+// Build Filtered accordion displaying only basketball teams
 function basketBallAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
@@ -319,7 +298,7 @@ function basketBallAccordion(dataArr) {
   jQuery('#accordions').html(accordionArray);
 }
 
-//Build Filtered accordion displaying only hockey teams
+// Build Filtered accordion displaying only hockey teams
 function hockeyAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
@@ -344,7 +323,7 @@ function hockeyAccordion(dataArr) {
   jQuery('#accordions').html(accordionArray);
 }
 
-//Build Filtered accordion displaying only rugby teams
+// Build Filtered accordion displaying only rugby teams
 function rugbyAccordion(dataArr) {
   accordionArray = '';
   if (dataArr) {
@@ -369,7 +348,7 @@ function rugbyAccordion(dataArr) {
   jQuery('#accordions').html(accordionArray);
 }
 
-//Store the team data in the store object
+// Store the team data in the store object
 function storeTeam(teamObj) {
 
   var stadiumImage;
@@ -388,7 +367,7 @@ function storeTeam(teamObj) {
   store.teamStadiumDesc = teamObj.teams[0].strStadiumDescription;
 }
 
-//Push the team Players into the Store
+// Push the team Players into the Store
 function storePlayers(teamObj) {
   if (teamObj.player) {
     teamObj.player.forEach((player) => {
@@ -413,7 +392,7 @@ function storePlayers(teamObj) {
   }
 }
 
-//Reset the store to default
+// Reset the store to default
 function resetStore() {
   store.teamBadge = '';
   store.teamDesc = '';
@@ -425,7 +404,7 @@ function resetStore() {
   store.teamStadiumName = '';
 }
 
-//Populate the Team Rollout with the selected teams data
+// Populate the Team Rollout with the selected teams data
 async function teamRollout(teamId) {
   resetStore();
 
@@ -448,7 +427,7 @@ async function teamRollout(teamId) {
   window.scroll({ top: 0, left: 0 });
 }
 
-//Back button to return to team search
+// Back button to return to team search
 function backButton() {
   jQuery('#team-page').hide();
   jQuery('#search-page').show();
