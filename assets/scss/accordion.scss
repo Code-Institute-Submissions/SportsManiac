@@ -90,6 +90,14 @@
   .nodata span {
     display: none;
   }
+
+  .accordion-link{
+    height: 120px;
+  }
+
+  .accordion-link-btn{
+    margin-top: 30px;
+  }
 }
 
 @media only screen and (max-width: 600px) {

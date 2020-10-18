@@ -34,4 +34,21 @@ Technologies used in this stack include:
 
 For the UI implementation the Materialize framework was applied to the base HTML.  While some simple styling used materialize CSS the main use was the Grid features.  The Grid uses a simple and easy to use row/column system with advanced class options for responsive page layouts.  
 
-SASS/SCSS was added to stack to help breakup the CSS more and even optimise the CSS.  In order to compile the SCSS files Gulp.js was used as it allowed for far greater control of the format of the compiled Main CSS file.  SCSS could also be used to breakup reusable rules like colours and font styles.  
+SASS/SCSS was added to the stack to help breakup and optimize the CSS.  In order to compile the SCSS files Gulp.js was used as it allowed for far greater control of the format of the compiled Main CSS file.  SCSS could also be used to breakup reusable rules like colours and font styles.  
+
+#### Logic Stack
+
+On the logic and data manipulation side, Javascript was used with the help of a couple libraries to help achieve the desired results.
+
+Axios.js was one of the libraries used for javascript work.  The reason behind this was to eliminate the necessity for Ajax calls which require far more code and implementation.  Axios handled most of the heavy lifting when it came to retrieving the data from the API so focus could be spent on the data flow to the UI.
+
+JQuery was used for most DOM manipulation.  Jquery again allowed for quicker and easier implementation so the focus of development could be applied elsewhere.  
+
+## Testing
+
+For testing a mix of manual and unit testing was used to determine the feasability of the app.  Unit testing relied on the Jasmine library which could be used to test the pure functions needed in the app.  Manual testing was relied for most of the data and DOM manipulation methods.  As data could not be garuanteed to be similar each time the test was run unit testing was not applied to these methods.  The Google chrome Dev Tools where heavily utilised here to monitor the data flow.  
+
+## Deployment 
+
+Github pages was used for the deployment.  Since the design for the use of SASS/SCSS was to compile down to a single main.css file the app qualified for deployment here.  The code files where pushed to Github repo and using Settings deploy to pages the app was successfully running on the web.
+

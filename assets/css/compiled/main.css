@@ -7,16 +7,16 @@
 .accordion-link{height:294px;width:100%;padding:0 auto}.accordion-link-btn{height:60px;width:100%;padding-top:10px;margin-top:100px}
 .accordion-link-btn-text{font-family:"Pridi",serif;font-size:20px;color:#424242}
 .nodata{text-align:center}@media screen and (max-width:933px){.nodata span{display:none}
-}@media only screen and (max-width:600px){.team-name{display:none}}.footer-section{height:300px}
-.contact{font-size:20px}.contact h4{text-decoration:underline}.contact li{margin-top:20px}
-.social{font-size:40px;margin:0 auto}.social h4{text-decoration:underline}.social i{padding:10px;color:white !important;cursor:pointer}
-@media screen and (max-width:600px){.footer-section{height:500px}}.home-header-title{border-bottom:solid 4px}
-.home-header-title h1{color:#1f945b;background:white;padding:10px 0}.home-container{width:90%;margin:0 Auto;margin-top:30px}
-.home-sports-btns{margin-left:5%}.sport-btn{height:170px;cursor:pointer}.sport-btn i{font-size:100px}
-body{background-color:#1f945b;color:white;font-family:"Open Sans"}h1{text-align:center;font-family:"Pridi",serif}
-h2{font-family:"Pridi",serif}.space{margin:40px}.whiteLine{border-top:solid 4px white;margin-bottom:60px}
-.whiteLine2{border-top:solid 4px white;margin-bottom:60px;margin-top:60px}.search-title{color:#1f945b;padding-left:30px;border-radius:5px}
-.search-btn{height:45px;width:100%;padding-top:5px;font-size:25px;font-family:"Pridi",serif;border-radius:5px}
+.accordion-link{height:120px}.accordion-link-btn{margin-top:30px}}@media only screen and (max-width:600px){.team-name{display:none}
+}.footer-section{height:300px}.contact{font-size:20px}.contact h4{text-decoration:underline}
+.contact li{margin-top:20px}.social{font-size:40px;margin:0 auto}.social h4{text-decoration:underline}
+.social i{padding:10px;color:white !important;cursor:pointer}@media screen and (max-width:600px){.footer-section{height:500px}
+}.home-header-title{border-bottom:solid 4px}.home-header-title h1{color:#1f945b;background:white;padding:10px 0}
+.home-container{width:90%;margin:0 Auto;margin-top:30px}.home-sports-btns{margin-left:5%}
+.sport-btn{height:170px;cursor:pointer}.sport-btn i{font-size:100px}body{background-color:#1f945b;color:white;font-family:"Open Sans"}
+h1{text-align:center;font-family:"Pridi",serif}h2{font-family:"Pridi",serif}
+.space{margin:40px}.whiteLine{border-top:solid 4px white;margin-bottom:60px}.whiteLine2{border-top:solid 4px white;margin-bottom:60px;margin-top:60px}
+.search-title{color:#1f945b;padding-left:30px;border-radius:5px}.search-btn{height:45px;width:100%;padding-top:5px;font-size:25px;font-family:"Pridi",serif;border-radius:5px}
 .search-btn:hover{color:#424242}.search-data h5{line-height:normal}.slider-section{margin-top:30px;padding-bottom:50px;padding-top:50px}
 .slide-border{border-top:solid white 4px;border-bottom:solid white 4px;border-radius:5px}
 .slider-text-left{background:rgba(18,92,56,0.5);font-family:"Pridi",serif;padding:30px;border-radius:5px;width:50%;float:right}
