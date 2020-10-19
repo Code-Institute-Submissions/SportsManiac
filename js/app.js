@@ -23,45 +23,22 @@ $(document).ready(() => {
     filter.show();
   });
 
-  $('#baseball').click(() => {
-    var input = $('#search-input').val();
-    if (input) {
-      filterSport(input, 'Baseball');
-    }
-  });
+  var filters = [
+    ['baseball', 'Baseball'],
+    ['soccer', 'Soccer'],
+    ['football', 'American Football'],
+    ['basketball', 'Basketball'],
+    ['hockey', 'Ice Hockey'],
+    ['rugby', 'Rugby']
+  ]
 
-  $('#soccer').click(() => {
-    var input = $('#search-input').val();
-    if (input) {
-      filterSport(input, 'Soccer');
-    }
-  });
-
-  $('#football').click(() => {
-    var input = $('#search-input').val();
-    if (input) {
-      filterSport(input, 'American Football');
-    }
-  });
-
-  $('#basketball').click(() => {
-    var input = $('#search-input').val();
-    if (input) {
-      filterSport(input, 'Basketball');
-    }
-  });
-
-  $('#hockey').click(() => {
-    var input = $('#search-input').val();
-    if (input) {
-      filterSport(input, 'Ice Hockey');
-    }
-  });
-
-  $('#rugby').click(() => {
-    var input = $('#search-input').val();
-    if (input) {
-      filterSport(input, 'Rugby');
-    }
-  });
+  // Filter method for each sport 
+  filters.forEach(sport => {
+    $(`#${sport[0]}`).click(() => {
+      var input = $('#search-input').val();
+      if (input) {
+        filterSport(input, `${sport[1]}`);
+      }
+    });
+  })
 });

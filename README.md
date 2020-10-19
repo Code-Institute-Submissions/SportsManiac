@@ -50,5 +50,12 @@ For testing a mix of manual and unit testing was used to determine the feasabili
 
 ## Deployment 
 
-Github pages was used for the deployment.  Since the design for the use of SASS/SCSS was to compile down to a single main.css file the app qualified for deployment here.  The code files where pushed to Github repo and using Settings deploy to pages the app was successfully running on the web.
+The site was deployed using GitHub pages.
+
+URL: https://cameronduncan678.github.io/SportsManiac/
+
+Steps to deploy:
+* On the Github repository page
+* In settings/ Github pages
+* set source to master
 
