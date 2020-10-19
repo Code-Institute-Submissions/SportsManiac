@@ -10,7 +10,7 @@ Features of the Sports Maniac web app include:
 
 ## UI/UX
 
-General Design for the webapp went for a score card style with reliance on imagery and team colors.  Most of the structure for the app relied around two page layouts.  One for the team search and another for the team displaying its relevant data.  The colors chosen relied around a medium green tone to darker and grey tones with some white added for good contrast.  Multiple extra colors where chosen to accent the team colours in the data.  
+General Design for the webapp went for a score card style with reliance on imagery and team colors.  Most of the structure for the app relied around two page layouts.  One for the team search and another for the team displaying its relevant data.  The colours chosen relied around a medium green tone to darker and grey tones with some white added for good contrast.  Multiple extra colors where chosen to accent the team colours in the data.  
 
 User experiance was focused on the simplicity of the app.  Users would need need much to start using the app.  Most interactive features where designed around simplicity and self explanatory elements and widgets.  
 
